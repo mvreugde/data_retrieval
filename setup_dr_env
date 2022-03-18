@@ -1,0 +1,9 @@
+# Set up conda processing environment for dataretrieval
+wget https://repo.anaconda.com/miniconda/Miniconda3-py38_4.11.0-Linux-x86_64.sh -O miniconda.sh
+bash miniconda.sh 
+conda create -q -n dr_env -c conda-forge python=3.8 numpy pandas netCDF4 pip pyproj cython h5py cartopy xarray
+source activate dr_env
+pip install pyscaffold pygeobase pygeogrids pynetcf lxml jupyter matplotlib 
+pip install ascat
+pip install ismn
+pip install pytesmo
